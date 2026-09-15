@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<script>const BRAND_NAME = "AI番頭（仮称）"; /* 商品名は商標確認後に差し替える（docs/04_TRADEMARK_CHECK_2026-09-14.md） */</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>承認だけで回る経営｜SYNOR</title>
+<meta name="description" content="従業員10〜50名の会社向けに、承認だけで回る経営をAIエージェントで実装します。診断5万円から、設計した本人が導入・定着まで担当します。">
+<link rel="canonical" href="https://synor.jp/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SYNOR">
+<meta property="og:title" content="承認だけで回る経営を、10〜50名の会社に。｜SYNOR">
+<meta property="og:description" content="議事録の整理も数字の集計も問い合わせの一次対応も、AIエージェントが下ごしらえ。社長がするのは確認して承認を押すことだけ。診断5万円から。">
+<meta property="og:url" content="https://synor.jp/">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"SYNOR","url":"https://synor.jp/","description":"従業員10〜50名の会社向けに、承認だけで回る経営をAIエージェントで実装する個人事業主。診断「AI業務ドック」5万円から。","founder":{"@type":"Person","name":"板東雄樹"},"areaServed":"JP","priceRange":"¥50,000〜"}
+</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230C2340'/%3E%3Ctext x='32' y='43' font-size='30' font-family='Arial, sans-serif' fill='%230E7C8B' text-anchor='middle' font-weight='700'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F7F4EE;
+    --bg-alt:#EFE8DA;
+    --card:#FFFFFF;
+    --ink:#0C2340;
+    --ink-soft:#48566E;
+    --accent:#0C6E7C;
+    --line:rgba(12,35,64,.16);
+    --radius:4px;
+    --maxw:960px;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Noto Sans JP',-apple-system,BlinkMacSystemFont,'Hiragino Sans','Yu Gothic',sans-serif;
+    line-height:1.9;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-weight:700;line-height:1.5;margin:0 0 .6em;letter-spacing:.01em;}
+  p{margin:0 0 1.1em;}
+  ul{margin:0;}
+  a{color:var(--accent);}
+  a:focus-visible,summary:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .kicker{color:var(--accent);font-weight:700;letter-spacing:.06em;font-size:.85rem;margin-bottom:1em;}
+
+  /* ヘッダー */
+  .site-header{border-bottom:1px solid var(--line);padding:18px 0;background:var(--bg);}
+  .site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  .logo{font-weight:900;font-size:1.2rem;letter-spacing:.03em;color:var(--ink);text-decoration:none;}
+
+  .btn{display:inline-block;background:var(--accent);color:#fff;padding:.9em 1.7em;border-radius:var(--radius);text-decoration:none;font-weight:700;font-size:.95rem;white-space:nowrap;}
+  .btn:hover{opacity:.9;}
+  .btn-sm{padding:.6em 1.2em;font-size:.85rem;}
+
+  /* 共通セクション */
+  .section{padding:64px 0;border-bottom:1px solid var(--line);}
+  .section.alt{background:var(--bg-alt);}
+  .section h2{font-size:clamp(1.5rem,1.2rem + 1vw,2.1rem);max-width:none;}
+  .section .lead{color:var(--ink-soft);max-width:58ch;font-size:1.05rem;}
+
+  /* ヒーロー */
+  .hero{padding:80px 0 68px;border-bottom:1px solid var(--line);}
+  .hero h1{font-size:clamp(1.9rem,1.3rem + 2.4vw,3.1rem);max-width:none;}
+  .hero .lead{font-size:1.15rem;color:var(--ink-soft);max-width:50ch;}
+  .hero .cta-row{margin-top:1.8em;display:flex;align-items:center;gap:1.2em;flex-wrap:wrap;}
+  .hero .note{font-size:.85rem;color:var(--ink-soft);}
+  .hero .proof-link{margin-top:2.2em;font-size:.9rem;}
+
+  /* ②こんな会社向け */
+  .fit-list{list-style:none;margin:1.8em 0 0;padding:0;display:grid;gap:1em;}
+  .fit-list li{padding-left:1.6em;position:relative;color:var(--ink-soft);}
+  .fit-list li::before{content:"";position:absolute;left:0;top:.65em;width:7px;height:7px;background:var(--accent);border-radius:50%;}
+  .fit-list strong{color:var(--ink);}
+
+  /* ③何が起きるか */
+  .stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.4rem;margin-top:2rem;}
+  .stat-card{background:var(--card);border:1px solid var(--line);padding:1.7rem;min-width:0;}
+  .stat-figure{font-size:1.3rem;font-weight:700;color:var(--ink);margin-bottom:.5em;}
+  .stat-label{color:var(--accent);font-weight:700;font-size:.8rem;letter-spacing:.04em;margin-bottom:.7em;}
+  .stat-body{color:var(--ink-soft);font-size:.92rem;margin:0;}
+  .disclaimer{font-size:.8rem;color:var(--ink-soft);margin-top:1.3rem;}
+
+  /* ④商品ラダー */
+  .price-block{margin-top:2.2rem;}
+  .price-block + .price-block{margin-top:2.6rem;padding-top:2.2rem;border-top:1px solid var(--line);}
+  .price-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;margin-bottom:1.1rem;flex-wrap:wrap;}
+  .price-head h3{margin:0;font-size:1.2rem;}
+  .badge{display:inline-block;margin-left:.5em;background:var(--ink);color:#fff;font-size:.7rem;padding:.3em .8em;border-radius:99px;font-weight:700;letter-spacing:.03em;vertical-align:middle;}
+  .price-solo{background:var(--card);border:1px solid var(--line);padding:1.6rem;}
+  .price-solo .tier-price{font-size:1.5rem;font-weight:700;}
+  .price-tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;}
+  .price-card{border:1px solid var(--line);background:var(--card);padding:1.5rem;min-width:0;}
+  .price-card.is-main{border-color:var(--accent);border-width:2px;}
+  .price-card .tier-name{font-weight:700;margin-bottom:.5em;}
+  .price-card .tier-price{font-size:1.25rem;font-weight:700;color:var(--ink);margin-bottom:.15em;}
+  .price-card .tier-sub{font-size:.8rem;color:var(--ink-soft);margin-bottom:.9em;}
+  .price-card ul{padding-left:1.15em;font-size:.87rem;color:var(--ink-soft);}
+  .price-card li{margin-bottom:.3em;}
+  .price-note{font-size:.8rem;color:var(--ink-soft);margin-top:1.1rem;}
+
+  /* ⑤進め方 */
+  .timeline{margin-top:2rem;display:grid;gap:1.7rem;}
+  .tl-step{display:grid;grid-template-columns:44px 1fr;gap:1.1rem;}
+  .tl-num{width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0;}
+  .tl-body h3{margin:0 0 .35em;font-size:1.05rem;}
+  .tl-body p{margin:0;color:var(--ink-soft);font-size:.92rem;}
+
+  /* ⑥成果保証 */
+  .callout{border:1px solid var(--line);border-left:4px solid var(--accent);padding:1.5rem 1.7rem;background:var(--card);margin-top:1.6rem;}
+  .callout p:last-child{margin-bottom:0;}
+  .small-note{font-size:.82rem;color:var(--ink-soft);}
+
+  /* ⑦⑧ 文章セクション */
+  .prose{max-width:62ch;}
+  .prose p{color:var(--ink-soft);}
+  .pull{font-size:1.1rem;font-weight:700;border-left:3px solid var(--accent);padding-left:1em;margin:1.3em 0;color:var(--ink);}
+
+  /* ⑨FAQ */
+  .faq-item{border-bottom:1px solid var(--line);padding:1.15em 0;}
+  .faq-item summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1em;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:"+";font-size:1.4em;color:var(--accent);flex-shrink:0;}
+  .faq-item[open] summary::after{content:"\2212";}
+  .faq-item p{margin:.9em 0 0;color:var(--ink-soft);font-size:.95rem;}
+
+  /* ⑩CTA */
+  .cta-final{text-align:left;}
+  .cta-final .btn{margin-top:.6em;}
+
+  /* ⑪フッター */
+  .site-footer{padding:40px 0;}
+  .site-footer .wrap{display:flex;flex-direction:column;gap:.9em;font-size:.85rem;color:var(--ink-soft);}
+  .footer-links{display:flex;gap:1.3em;flex-wrap:wrap;}
+  .footer-links a{color:var(--ink-soft);text-decoration:underline;}
+
+  @media (max-width:640px){
+    .hero{padding:52px 0 44px;}
+    .section{padding:44px 0;}
+    .tl-step{grid-template-columns:36px 1fr;}
+    .tl-num{width:36px;height:36px;font-size:.85rem;}
+  }
+  @media (max-width:400px){
+    .btn{white-space:normal;text-align:center;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ヘッダー -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="#top">SYNOR</a>
+    <a class="btn btn-sm" href="https://docs.google.com/forms/d/e/1FAIpQLSeow24u8tA2bw6NMGHjweMsaNxZI_1W52VsIdF4Mf8kRPzNaA/viewform">30分の無料相談を予約する</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ①ヒーロー -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">SYNOR｜中小企業のための承認経営AI導入</p>
+      <h1>承認だけで回る経営を、<br>10〜50名の会社に。</h1>
+      <p class="lead">議事録の整理も、数字の集計も、問い合わせへの一次対応も、AIエージェントが下ごしらえします。社長がすることは、内容を確認して承認を押すことだけです。</p>
+      <div class="cta-row">
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeow24u8tA2bw6NMGHjweMsaNxZI_1W52VsIdF4Mf8kRPzNaA/viewform">30分の無料相談を予約する</a>
+        <span class="note">相談は無料です。売り込みはしません。</span>
+      </div>
+      <p class="proof-link"><a href="#proof">→ この仕組みは、まず自分たちの会社で実証しています</a></p>
+    </div>
+  </section>
+
+  <!-- ②こんな会社向け -->
+  <section class="section" id="fit">
+    <div class="wrap">
+      <h2>こんな会社に向いています</h2>
+      <p class="lead">業種は問いません。共通しているのは、管理の人手が足りていないことです。</p>
+      <ul class="fit-list">
+        <li><strong>従業員10〜50名</strong>で、管理部門の担当者が1〜3人しかいない</li>
+        <li><strong>社長が実質的な管理部長</strong>を兼ねていて、経理も労務も総務も自分で見ている</li>
+        <li>会議で決めたことが、気づけば誰の手も止まったままになっている</li>
+        <li><strong>Google Workspace</strong>を使っている（現時点はGoogle環境への対応を優先しています）</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ③何が起きるか -->
+  <section class="section alt" id="outcomes">
+    <div class="wrap">
+      <h2>導入すると何が変わるか</h2>
+      <p class="lead">大きな数字だけを並べても実感が湧きません。実際に起きるのは、こういう小さな変化です。</p>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <p class="stat-label">入力の手間</p>
+          <p class="stat-figure">入力15項目 → 5項目</p>
+          <p class="stat-body">申請や報告のフォーム項目を絞り込みます。多くは選ぶだけ、話すだけで残りをAIが埋めます。</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">集計の時間</p>
+          <p class="stat-figure">週2時間の集計が0に</p>
+          <p class="stat-body">毎週手作業だった数字集計をAIが引き受けます。浮いた時間は経営判断に回せます。</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-label">決めたことが消えない</p>
+          <p class="stat-figure">決定事項が翌朝タスクで届く</p>
+          <p class="stat-body">会議の録音から決定事項と宿題を抜き出し、担当と期限つきで翌朝には届きます。</p>
+        </div>
+      </div>
+      <p class="disclaimer">※ 実際の自動化事例をもとにした一般的な目安です。効果は業務内容により異なり、数値を保証するものではありません。</p>
+    </div>
+  </section>
+
+  <!-- ④商品ラダー -->
+  <section class="section" id="pricing">
+    <div class="wrap">
+      <h2>進め方と料金</h2>
+      <p class="lead">いきなり大きな契約は必要ありません。まず業務の棚卸しから始めます。</p>
+
+      <div class="price-block">
+        <div class="price-head">
+          <h3>診断「AI業務ドック」</h3>
+        </div>
+        <div class="price-solo">
+          <p class="tier-price">5万円<span style="font-size:.6em;font-weight:400;">（税別）</span></p>
+          <p class="tier-sub">納期：1週間　※ご契約時に全額を導入費用へ充当します</p>
+          <p style="margin:0;color:var(--ink-soft);font-size:.92rem;">業務を30項目で棚卸しし、削減できそうな金額を試算したうえで、90日のロードマップにまとめます。補助金の該当有無もあわせて確認します。</p>
+        </div>
+      </div>
+
+      <div class="price-block">
+        <div class="price-head">
+          <h3>導入「<span class="brand"></span>」</h3>
+        </div>
+        <div class="price-tiers">
+          <div class="price-card">
+            <p class="tier-name">Light</p>
+            <p class="tier-price">30万円</p>
+            <p class="tier-sub">＋月額1.5万円／納期2週間</p>
+            <ul>
+              <li>対象業務1つ＋操作研修1回</li>
+            </ul>
+          </div>
+          <div class="price-card is-main">
+            <p class="tier-name">Standard<span class="badge">おすすめ</span></p>
+            <p class="tier-price">55万円</p>
+            <p class="tier-sub">＋月額3万円／納期30日</p>
+            <ul>
+              <li>対象業務2つ＋毎朝の経営ブリーフ</li>
+              <li>運用ルール1枚を添付</li>
+            </ul>
+          </div>
+          <div class="price-card">
+            <p class="tier-name">Pro</p>
+            <p class="tier-price">90万円</p>
+            <p class="tier-sub">＋月額5万円／納期60日</p>
+            <ul>
+              <li>対象業務3つ＋ワンタップ承認の仕組み</li>
+              <li>規程・権限ルールの整備</li>
+            </ul>
+          </div>
+        </div>
+        <p class="price-note">価格はすべて税別です。月額には軽微な改善対応（月2時間）を含みます。契約は前受50%・検収後50%（Lightは全額前受も可）です。</p>
+      </div>
+
+      <div class="price-block">
+        <div class="price-head">
+          <h3>承認経営顧問</h3>
+        </div>
+        <div class="price-tiers">
+          <div class="price-card">
+            <p class="tier-name">月10万円</p>
+            <ul><li>月1回90分の経営相談＋日常のチャット相談</li></ul>
+          </div>
+          <div class="price-card">
+            <p class="tier-name">月20万円</p>
+            <ul><li>左記に加えて管理部門の設計相談</li></ul>
+          </div>
+          <div class="price-card">
+            <p class="tier-name">月30万円</p>
+            <ul><li>左記に加えて補助金事業計画・内部管理体制の相談</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤進め方 -->
+  <section class="section alt" id="process">
+    <div class="wrap">
+      <h2>はじめてから最初の成果まで</h2>
+      <div class="timeline">
+        <div class="tl-step">
+          <div class="tl-num">1</div>
+          <div class="tl-body">
+            <h3>30分の無料相談</h3>
+            <p>現状を伺い、削減できそうな金額をその場で試算します。</p>
+          </div>
+        </div>
+        <div class="tl-step">
+          <div class="tl-num">2</div>
+          <div class="tl-body">
+            <h3>1週間で診断</h3>
+            <p>業務を30項目で棚卸しし、90日のロードマップにまとめます。</p>
+          </div>
+        </div>
+        <div class="tl-step">
+          <div class="tl-num">3</div>
+          <div class="tl-body">
+            <h3>2週間〜60日で導入</h3>
+            <p>選んだ規模（Light・Standard・Pro）に応じて、運用に乗せるところまで担当します。</p>
+          </div>
+        </div>
+        <div class="tl-step">
+          <div class="tl-num">4</div>
+          <div class="tl-body">
+            <h3>導入後は毎週レポート</h3>
+            <p>削減できた時間を金額に換算して、週次でご報告します。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥成果保証 -->
+  <section class="section" id="guarantee">
+    <div class="wrap">
+      <h2>成果保証について</h2>
+      <div class="callout">
+        <p>対象業務を1つ決め、導入前後の処理時間を実測します。30日で40%の削減に届かなかった場合、削減が届くまで追加の改善を無償で行い、月額費用を3ヶ月分免除します。</p>
+        <p class="small-note">返金をお約束するものではありません。対象は事前に合意した1つの業務にかぎります。条件の詳細はご契約時に書面でお渡しします。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦なぜSYNORか -->
+  <section class="section alt" id="why">
+    <div class="wrap">
+      <h2>なぜSYNORか</h2>
+      <div class="prose">
+        <p>代表の板東雄樹は、前職の株式会社AXIDEAで取締役経営管理本部長を務め、全社の管理部門運営とSalesforce管理者、DX推進を担当しました。</p>
+        <p class="pull">設計する側と、実際に手を動かして作る側を、同じ人間が担う。</p>
+        <p>要件が現場の実態からズレないのは、企画した本人が実装まで見届けるからです。提案書を出して終わりにせず、運用に乗って現場が回り始めるところまで責任を持ちます。ツールそのものはいずれ他社に置き換わるかもしれません。それでも変わらない価値は、業務をどう設計し、どこに権限を置くかを判断できることだと考えています。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑧自己実証 -->
+  <section class="section" id="proof">
+    <div class="wrap">
+      <h2>SYNOR自身も、この仕組みで動いています</h2>
+      <div class="prose">
+        <p>SYNORは、この事業を立ち上げる過程そのものを、AIエージェントと一緒に進めています。問い合わせへの一次返信案の作成、コンテンツの下書き、日々の数字集計はAIエージェントが下ごしらえし、内容を確認して承認するところまでを板東が担います。</p>
+        <p>売り込みのための実績づくりではなく、自分たちの会社で先に試している運営のかたちです。内部の構成や手順は非公開ですが、うまくいったことも詰まったことも、記事やSNSで随時公開していきます。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑨FAQ -->
+  <section class="section alt" id="faq">
+    <div class="wrap">
+      <h2>よくある質問</h2>
+      <div>
+        <details class="faq-item">
+          <summary>費用が高いように感じます。</summary>
+          <p>導入費用だけで見ると小さくない金額です。実際に削減できる時間を金額に換算して比較いただくことをおすすめします。多くの場合、数か月で削減額が導入費用を上回ります。ものづくり補助金やIT導入補助金など、該当する制度がないかも診断時にあわせて確認します。</p>
+        </details>
+        <details class="faq-item">
+          <summary>自分たちでも作れる気がします。</summary>
+          <p>ツール自体は、作ろうと思えば作れます。難しいのはそこから先で、現場に定着させ、ルールとして運用し続けることです。SYNORが担うのは仕組みづくりよりも、その定着と運用ルールの設計にあります。</p>
+        </details>
+        <details class="faq-item">
+          <summary>セキュリティが心配です。</summary>
+          <p>データは御社のGoogle環境の中で完結する設計です。外部のサーバーにデータを送って処理する形にはしません。AIの学習に使われない設定（オプトアウト）を組み込んだうえでお渡しします。</p>
+        </details>
+        <details class="faq-item">
+          <summary>効果が出るか分かりません。</summary>
+          <p>導入前後で処理時間を実測し、30日で40%削減に届かなければ追加の改善を無償で行い、月額を3ヶ月分免除します。条件の詳細は成果保証の項目をご覧ください。</p>
+        </details>
+        <details class="faq-item">
+          <summary>今はまだそのタイミングではありません。</summary>
+          <p>今すぐの導入をおすすめしているわけではありません。まずは無料相談で現状を整理するだけでも構いません。ご希望があれば、業務効率化に関する情報を定期的にお届けします。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑩CTA -->
+  <section class="section cta-final" id="cta">
+    <div class="wrap">
+      <h2>まずは30分、話してみませんか</h2>
+      <p class="lead">売り込みはしません。現状を伺い、削減できそうな金額をその場で試算します。</p>
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeow24u8tA2bw6NMGHjweMsaNxZI_1W52VsIdF4Mf8kRPzNaA/viewform">無料相談を予約する</a>
+      <p class="note" style="margin-top:1em;font-size:.85rem;color:var(--ink-soft);">相談後に、しつこいご連絡はしません。</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ⑪フッター -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="tokushoho.html">特定商取引法に基づく表記</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+    </div>
+    <div>お問い合わせ：<a href="mailto:info@synor.jp">info@synor.jp</a></div>
+    <div>© 2026 SYNOR（個人事業主 板東雄樹）</div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "費用が高いように感じます。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "導入費用だけで見ると小さくない金額です。実際に削減できる時間を金額に換算して比較いただくことをおすすめします。多くの場合、数か月で削減額が導入費用を上回ります。ものづくり補助金やIT導入補助金など、該当する制度がないかも診断時にあわせて確認します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "自分たちでも作れる気がします。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ツール自体は、作ろうと思えば作れます。難しいのはそこから先で、現場に定着させ、ルールとして運用し続けることです。SYNORが担うのは仕組みづくりよりも、その定着と運用ルールの設計にあります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "セキュリティが心配です。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "データは御社のGoogle環境の中で完結する設計です。外部のサーバーにデータを送って処理する形にはしません。AIの学習に使われない設定（オプトアウト）を組み込んだうえでお渡しします。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "効果が出るか分かりません。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "導入前後で処理時間を実測し、30日で40%削減に届かなければ追加の改善を無償で行い、月額を3ヶ月分免除します。条件の詳細は成果保証の項目をご覧ください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "今はまだそのタイミングではありません。",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "今すぐの導入をおすすめしているわけではありません。まずは無料相談で現状を整理するだけでも構いません。ご希望があれば、業務効率化に関する情報を定期的にお届けします。"
+      }
+    }
+  ]
+}
+</script>
+
+<script>
+document.querySelectorAll('.brand').forEach(function(el){ el.textContent = BRAND_NAME; });
+</script>
+
+</body>
+</html>
