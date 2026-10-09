@@ -83,6 +83,7 @@ gtag('config', 'G-5B497FD0KF');
   .nav{display:flex;gap:26px;align-items:center;list-style:none;padding:0;margin:0;}
   .nav a{color:var(--ink-2);text-decoration:none;font-size:14px;font-weight:700;}
   .nav a:hover{color:var(--accent);}
+  .nav a.btn,.nav a.btn:hover{color:#fff;}
   .nav .btn{padding:10px 18px;min-height:0;font-size:14px;box-shadow:none;}
   @media (max-width:760px){.nav li:not(.cta){display:none;}}
 
@@ -382,7 +383,7 @@ setTimeout(function(){ if(!window.__lpReady){ document.documentElement.classList
       <li><a href="#free">無料でできること</a></li>
       <li><a href="#pricing">料金</a></li>
       <li><a href="#faq">よくある質問</a></li>
-      <li class="cta"><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeow24u8tA2bw6NMGHjweMsaNxZI_1W52VsIdF4Mf8kRPzNaA/viewform" target="_blank" rel="noopener">無料相談を予約</a></li>
+      <li class="cta"><a class="btn" id="cta-header" href="https://docs.google.com/forms/d/e/1FAIpQLSeow24u8tA2bw6NMGHjweMsaNxZI_1W52VsIdF4Mf8kRPzNaA/viewform" target="_blank" rel="noopener">無料相談を予約</a></li>
     </ul>
   </div>
 </header>
@@ -397,10 +398,10 @@ setTimeout(function(){ if(!window.__lpReady){ document.documentElement.classList
       <p class="tagline">〝社長が全部見る〟経営は、もう終わり。</p>
       <p class="tagline2">議事録・集計・請求の確認まで、<b class="ac">AIが人の代わりに動きます</b>。社長は<b class="ac">承認だけ</b>。浮いた時間を、売上をつくる行動へ。</p>
       <div class="cta-row">
-        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeow24u8tA2bw6NMGHjweMsaNxZI_1W52VsIdF4Mf8kRPzNaA/viewform" target="_blank" rel="noopener">30分の無料相談を予約する <span class="arrow">→</span></a>
+        <a class="btn" id="cta-hero" href="https://docs.google.com/forms/d/e/1FAIpQLSeow24u8tA2bw6NMGHjweMsaNxZI_1W52VsIdF4Mf8kRPzNaA/viewform" target="_blank" rel="noopener">30分の無料相談を予約する <span class="arrow">→</span></a>
         <a class="btn ghost" href="#pricing">料金を見る</a>
       </div>
-      <p class="note">お申込みへの返信と一緒に、回答内容からAIが作る「自動化の見込み額レポート」が届きます。売り込みはしません。</p>
+      <p class="note">お申込みから1営業日以内に、回答内容からAIが作る「自動化の見込み額レポート」を返信と一緒にお届けします。売り込みはしません。</p>
       <ul class="feat">
         <li><span class="ico"><svg><use href="#i-doc"/></svg></span>会議の決定事項を追跡</li>
         <li><span class="ico"><svg><use href="#i-chart"/></svg></span>集計と経営ブリーフ</li>
@@ -550,7 +551,7 @@ setTimeout(function(){ if(!window.__lpReady){ document.documentElement.classList
   <div class="wrap grid2">
     <div class="reveal">
       <span class="kicker">まず無料で、ここまで</span>
-      <h2>申し込んだ時点で、<br class="pc">数字が返ってきます。</h2>
+      <h2>申し込みへの返信で、<br class="pc">数字が届きます。</h2>
       <p class="lead">売り込みの前に、御社の業務でどれくらい時間が浮くのかを先にお渡しします。費用はかかりません。</p>
       <ol class="steps">
         <li>
@@ -619,7 +620,7 @@ setTimeout(function(){ if(!window.__lpReady){ document.documentElement.classList
       </div>
       <ul class="notes">
         <li>お支払いは着手時50%・検収後50%（Lightは全額前受も可）。月額には軽微な改善対応（月2時間）を含みます。</li>
-        <li>IT導入補助金などが使える場合の実質負担の目安は <a href="/hojokin/">補助金の一次判定</a> に、相場との比較は <a href="/souba/">費用相場</a> にまとめています。</li>
+        <li>使える補助金の考え方は <a href="/hojokin/">補助金の一次判定</a> に、相場との比較は <a href="/souba/">費用相場</a> にまとめています。SYNORの費用はデジタル化・AI導入補助金の対象外ですが、組み合わせて使うクラウドツールの利用料が対象になる場合があります。</li>
         <li>導入後は月1回90分の経営相談＋チャット相談の「承認経営顧問」（月10万円〜）も選べます。</li>
       </ul>
       <div class="guarantee">
@@ -660,7 +661,7 @@ setTimeout(function(){ if(!window.__lpReady){ document.documentElement.classList
     <div class="faq-list reveal" style="margin-top:28px">
       <details><summary>診断まで無料なのはなぜですか。</summary><p>導入するかどうかを、実際のデータを見た数字で判断してほしいからです。診断だけで終えても費用はかかりませんし、売り込みもしません。費用が発生するのは、導入（業務自動化パック）を決めていただいてからです。</p></details>
       <details><summary>無料の「見込み額レポート」は、何をもとに出すのですか。</summary><p>申込フォームの回答（時間を取られている業務と、その月間時間）だけをもとに、AIが幅のある見込みとして試算します。実際のデータは見ていないので概算です。実際の請求書や支払データ、現場の流れを見て数字を確かめるのが、AI業務診断です。</p></details>
-      <details><summary>費用が高いように感じます。</summary><p>導入費用だけで見ると小さくない金額です。診断で出る「実測に基づく削減額」と比べて判断いただくことをおすすめします。診断で、数か月で削減額が導入費用を上回る見込みが出る場合は、その根拠と前提をお伝えします。IT導入補助金など該当する制度がないかも診断で確認し、実質負担の目安をお伝えします。</p></details>
+      <details><summary>費用が高いように感じます。</summary><p>導入費用だけで見ると小さくない金額です。診断で出る「実測に基づく削減額」と比べて判断いただくことをおすすめします。診断で、数か月で削減額が導入費用を上回る見込みが出る場合は、その根拠と前提をお伝えします。SYNORの費用はデジタル化・AI導入補助金の対象外ですが、組み合わせて使うクラウドツールに使える補助金がないかも、診断で確認します。</p></details>
       <details><summary>自分たちでも作れる気がします。</summary><p>ツール自体は、作ろうと思えば作れます。難しいのはそこから先で、現場に定着させ、ルールとして運用し続けることです。SYNORが担うのは仕組みづくりよりも、その定着と運用ルールの設計にあります。</p></details>
       <details><summary>セキュリティが心配です。</summary><p>御社のGoogle環境を起点に設計し、AIの処理も含めて外部に出すデータの範囲は事前に書面で明示します。AIの学習に使われない設定（オプトアウト）を組み込んだうえでお渡しします。</p></details>
       <details><summary>効果が出るか分かりません。</summary><p>導入前後で処理時間を実測し、30日で40%削減に届かなければ追加の改善を無償で行い、月額を3ヶ月分免除します。対象は事前に合意した1業務で、返金型ではありません。条件の詳細は成果保証の項目をご覧ください。</p></details>
@@ -673,8 +674,8 @@ setTimeout(function(){ if(!window.__lpReady){ document.documentElement.classList
   <div class="wrap">
     <div class="cta-box reveal">
       <h2>まずは30分、話してみませんか。</h2>
-      <p>売り込みはしません。現状を伺い、削減できそうな金額をその場で試算します。<br>診断まで0円。お申込みへの返信と一緒に、見込み額レポートが届きます。</p>
-      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeow24u8tA2bw6NMGHjweMsaNxZI_1W52VsIdF4Mf8kRPzNaA/viewform" target="_blank" rel="noopener">無料相談を予約する <span class="arrow">→</span></a>
+      <p>売り込みはしません。現状を伺い、削減できそうな金額をその場で試算します。<br>診断まで0円。お申込みから1営業日以内に、返信と一緒に見込み額レポートが届きます。</p>
+      <a class="btn" id="cta-final" href="https://docs.google.com/forms/d/e/1FAIpQLSeow24u8tA2bw6NMGHjweMsaNxZI_1W52VsIdF4Mf8kRPzNaA/viewform" target="_blank" rel="noopener">無料相談を予約する <span class="arrow">→</span></a>
     </div>
   </div>
 </section>
@@ -702,7 +703,7 @@ setTimeout(function(){ if(!window.__lpReady){ document.documentElement.classList
   "mainEntity": [
     {"@type":"Question","name":"診断まで無料なのはなぜですか。","acceptedAnswer":{"@type":"Answer","text":"導入するかどうかを、実際のデータを見た数字で判断してほしいからです。診断だけで終えても費用はかかりませんし、売り込みもしません。費用が発生するのは、導入（業務自動化パック）を決めていただいてからです。"}},
     {"@type":"Question","name":"無料の「見込み額レポート」は、何をもとに出すのですか。","acceptedAnswer":{"@type":"Answer","text":"申込フォームの回答（時間を取られている業務と、その月間時間）だけをもとに、AIが幅のある見込みとして試算します。実際のデータは見ていないので概算です。実際の請求書や支払データ、現場の流れを見て数字を確かめるのが、AI業務診断です。"}},
-    {"@type":"Question","name":"費用が高いように感じます。","acceptedAnswer":{"@type":"Answer","text":"導入費用だけで見ると小さくない金額です。診断で出る「実測に基づく削減額」と比べて判断いただくことをおすすめします。診断で、数か月で削減額が導入費用を上回る見込みが出る場合は、その根拠と前提をお伝えします。IT導入補助金など該当する制度がないかも診断で確認し、実質負担の目安をお伝えします。"}},
+    {"@type":"Question","name":"費用が高いように感じます。","acceptedAnswer":{"@type":"Answer","text":"導入費用だけで見ると小さくない金額です。診断で出る「実測に基づく削減額」と比べて判断いただくことをおすすめします。診断で、数か月で削減額が導入費用を上回る見込みが出る場合は、その根拠と前提をお伝えします。SYNORの費用はデジタル化・AI導入補助金の対象外ですが、組み合わせて使うクラウドツールに使える補助金がないかも、診断で確認します。"}},
     {"@type":"Question","name":"自分たちでも作れる気がします。","acceptedAnswer":{"@type":"Answer","text":"ツール自体は、作ろうと思えば作れます。難しいのはそこから先で、現場に定着させ、ルールとして運用し続けることです。SYNORが担うのは仕組みづくりよりも、その定着と運用ルールの設計にあります。"}},
     {"@type":"Question","name":"セキュリティが心配です。","acceptedAnswer":{"@type":"Answer","text":"御社のGoogle環境を起点に設計し、AIの処理も含めて外部に出すデータの範囲は事前に書面で明示します。AIの学習に使われない設定（オプトアウト）を組み込んだうえでお渡しします。"}},
     {"@type":"Question","name":"効果が出るか分かりません。","acceptedAnswer":{"@type":"Answer","text":"導入前後で処理時間を実測し、30日で40%削減に届かなければ追加の改善を無償で行い、月額を3ヶ月分免除します。対象は事前に合意した1業務で、返金型ではありません。条件の詳細は成果保証の項目をご覧ください。"}},
