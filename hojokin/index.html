@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://*.googletagmanager.com 'sha256-gZyHlrzBwwPU8i72oo1edQUkI6V0FDiHCXI/+SuCu44='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.google.com https://*.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5B497FD0KF"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-5B497FD0KF');
+</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI導入に使える補助金の一次判定｜SYNOR</title>
+<meta name="description" content="IT導入補助金・ものづくり補助金・小規模事業者持続化補助金など、AI導入に使える制度の一次判定。対象・補助率・上限・注意点を出所つきで整理し、実質負担の目安を示す。">
+<link rel="canonical" href="https://synor.jp/hojokin/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI導入に使える補助金の一次判定｜SYNOR">
+<meta property="og:description" content="IT導入補助金・ものづくり補助金・小規模事業者持続化補助金など、AI導入に使える制度の一次判定。対象・補助率・上限・注意点を出所つきで整理し、実質負担の目安を示す。">
+<meta property="og:url" content="https://synor.jp/hojokin/">
+<meta property="og:site_name" content="SYNOR">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAF7F1; --card:#FFFDF9;
+  --ink:#1B2A41; --ink-soft:#44536B; --muted:#7C8698;
+  --accent:#0E6E78; --accent-soft:#E7F0F0;
+  --hair:#E6DFD3; --hair-strong:#CFC5B4;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  font-size:16px; line-height:1.9;
+  font-feature-settings:"palt" 1; letter-spacing:.015em;
+}
+main{max-width:780px;margin:0 auto;padding:64px 28px 96px}
+
+h1.docttl{
+  background:none; color:var(--ink); padding:0; border-radius:0;
+  font-size:30px; line-height:1.35; font-weight:700; margin:0 0 4px; letter-spacing:.005em;
+}
+h1.docttl::after{content:"";display:block;width:54px;height:3px;background:var(--accent);margin-top:18px;border-radius:2px}
+p.meta{color:var(--muted);font-size:13.5px;line-height:1.8;margin:16px 0 36px}
+
+h1{
+  font-size:21px; font-weight:700; line-height:1.5; letter-spacing:.02em;
+  margin:60px 0 22px; padding:13px 18px;
+  background:var(--ink); color:#FFFDF9; border-radius:6px;
+}
+h2{
+  font-size:19px; font-weight:700; line-height:1.55;
+  margin:42px 0 14px; padding-left:14px; border-left:4px solid var(--accent);
+}
+h3{font-size:16px;font-weight:700;margin:28px 0 8px;color:var(--ink-soft)}
+
+p{margin:0 0 15px}
+p.lead{margin:24px 0 6px;font-weight:700;color:var(--accent);line-height:1.7}
+
+ul,ol{padding-left:0;margin:0 0 16px;list-style:none}
+ul li{position:relative;padding-left:1.25em;margin:7px 0}
+ul li::before{content:"";position:absolute;left:.3em;top:.82em;width:5px;height:5px;border-radius:50%;background:var(--hair-strong)}
+ol{counter-reset:li}
+ol li{position:relative;padding-left:2em;margin:7px 0;counter-increment:li}
+ol li::before{
+  content:counter(li); position:absolute; left:0; top:.28em;
+  width:1.4em;height:1.4em;line-height:1.4em;text-align:center;border-radius:50%;
+  background:var(--accent-soft); color:var(--accent); font-size:12px; font-weight:700;
+}
+
+strong{font-weight:700}
+code{background:#EFEAE0;padding:.1em .4em;border-radius:4px;font-size:.92em;
+     font-family:"SFMono-Regular",Consolas,"Courier New",monospace}
+a{color:var(--accent);text-underline-offset:3px}
+
+.wrap{overflow-x:auto;margin:16px 0 26px}
+table{border-collapse:collapse;width:100%;font-size:14.5px;background:var(--card);
+      border-radius:8px;overflow:hidden;border:1px solid var(--hair)}
+th{background:var(--ink);color:#FFFDF9;font-weight:700;font-size:13px;letter-spacing:.04em;
+   padding:11px 14px;text-align:left}
+td{padding:11px 14px;border-bottom:1px solid var(--hair);vertical-align:top;line-height:1.75}
+table tr:last-child td{border-bottom:none}
+table tr:nth-child(even) td{background:#FBF8F3}
+
+blockquote{margin:18px 0;padding:14px 18px;background:var(--card);
+           border-left:4px solid var(--accent);border-radius:0 6px 6px 0;color:var(--ink-soft)}
+blockquote p:last-child{margin-bottom:0}
+
+hr{border:0;height:1px;background:linear-gradient(90deg,var(--hair-strong),rgba(0,0,0,0));margin:40px 0}
+
+.back{display:inline-block;margin-top:52px;font-size:14px}
+
+@media (max-width:640px){
+  main{padding:40px 18px 64px}
+  body{font-size:15.5px;line-height:1.85}
+  h1.docttl{font-size:24px}
+  h1{font-size:18px;padding:11px 14px}
+  h2{font-size:17px}
+  table{font-size:13.5px}
+}
+
+@media print{
+  @page{margin:15mm 13mm}
+  body{font-size:10.5pt;line-height:1.75;background:var(--paper);
+       -webkit-print-color-adjust:exact;print-color-adjust:exact}
+  main{padding:0;max-width:none}
+  h1,h2,h3,p.lead{break-after:avoid;page-break-after:avoid}
+  table,.wrap,blockquote,li,tr{break-inside:avoid;page-break-inside:avoid}
+  h1{margin-top:26px}
+  h1.docttl{font-size:19pt}
+  h1:not(.docttl){font-size:13.5pt}
+  h2{font-size:12pt}
+  h3{font-size:11pt}
+  hr{margin:22px 0}
+  .back{display:none}
+}
+
+:root{--paper:#FFFFFF;--ink:#0B1F3A;--accent:#0F766E;--muted:#6B7686;--hair:#E3E8EE}
+h1,h2,h3{font-weight:900;letter-spacing:-.01em}
+h1{font-size:30px}
+h2{border-bottom:0;padding-bottom:0;margin-top:44px;font-size:22px}
+th{background:#F4F7F9}
+
+header.site{max-width:860px;margin:0 auto;padding:20px 24px 0;display:flex;justify-content:space-between;align-items:center;font-size:14px}
+header.site a{color:var(--ink);text-decoration:none;font-weight:700;letter-spacing:.04em}
+header.site nav a{font-weight:400;margin-left:16px;color:var(--accent)}
+main{padding-top:32px}
+.lead{font-size:17px;border-left:4px solid var(--accent);padding:10px 14px;background:#fff;margin:16px 0 24px}
+.source{color:var(--muted);font-size:13px;margin:-6px 0 18px}
+.cta{margin:40px 0 8px;padding:22px 20px;background:#fff;border:1px solid var(--hair);border-radius:8px}
+.cta a.btn{display:inline-block;margin-top:10px;padding:12px 22px;background:var(--accent);color:#fff;border-radius:6px;text-decoration:none;font-weight:700}
+footer.site{max-width:860px;margin:0 auto;padding:24px;color:var(--muted);font-size:13px;border-top:1px solid var(--hair)}
+footer.site a{color:var(--muted);margin-right:14px}
+em{font-style:normal;color:var(--muted)}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"AI導入に使える補助金にはどんな種類がありますか。","acceptedAnswer":{"@type":"Answer","text":"2026年9月時点で公式ページに掲載されているのは、大きく分けて4系統です。ITツール導入を補助する「デジタル化・AI導入補助金2026」、設備・システム投資を補助する「中小企業省力化投資補助金」と「新事業進出・ものづくり商業サービス補助金」、社員教育を補助する「人材開発支援助成金」です。"}},{"@type":"Question","name":"補助金と助成金はどう違いますか。","acceptedAnswer":{"@type":"Answer","text":"どちらも返済不要の公的資金です。補助金は審査があり不採択もあり得るのに対し、助成金は要件を満たせば原則として受給できる点が異なります。"}},{"@type":"Question","name":"どの制度が自社に合うかは、どう判断すればいいですか。","acceptedAnswer":{"@type":"Answer","text":"「効率化目的か新規事業目的か」「投資の中心がソフトウェアか設備か」「従業員数」の3点をチェックリストに当てはめるとおおよその見当がつきます。最終的な該当可否は、各制度の公式ページか専門家への確認が必要です。"}},{"@type":"Question","name":"補助金の申請は、いつまでに動けばいいですか。","acceptedAnswer":{"@type":"Answer","text":"制度ごとに公募回・締切が決まっています。使いたい制度が決まったら、公式ページで最新の締切を確認し、そこから逆算して準備を始めます。"}},{"@type":"Question","name":"SYNORは補助金の申請代行をしてくれますか。","acceptedAnswer":{"@type":"Answer","text":"申請書の作成・提出そのものの代行はしていません。AI業務診断の中で、該当しそうな制度の一次判定と、申請に必要な業務整理までを扱います。"}}]}</script>
+</head>
+<body>
+<header class="site"><a href="https://synor.jp/">SYNOR</a><nav><a href="https://synor.jp/#form">30分相談</a><a href="https://synor.jp/">トップ</a></nav></header>
+<main>
+<h1>AI導入に使える補助金の一次判定</h1>
+<p class="meta">結論から言うと、2026年9月時点で公式ページに掲載されているAI導入向けの公的制度は主に4つです。ソフト導入を補助する「デジタル化・AI導入補助金2026」、設備・システム投資を補助する「中小企業省力化投資補助金」、社員教育を補助する「人材開発支援助成金」、新規事業向けの「新事業進出・ものづくり商業サービス補助金」です。自社が「効率化目的」か「新規事業目的」かを最初に決めると、見るべき制度がすぐ絞れます。</p>
+<h2>うちの会社はどの補助金を見ればいいか（全体像）</h2>
+<div class="wrap"><table><tr><th>制度</th><th>こんな会社の候補になる</th><th>直近の締切目安</th></tr><tr><td>デジタル化・AI導入補助金2026</td><td>既存業務にITツール・生成AIを導入して効率化したい</td><td>1次締切 2026年9月29日17:00</td></tr><tr><td>中小企業省力化投資補助金</td><td>人手不足の定型業務を専用設備・システムで自動化したい</td><td>第8回公募 〜2026年10月16日</td></tr><tr><td>人材開発支援助成金</td><td>社員にAIの使い方を教育したい</td><td>随時受付（2026年度が最終年度）</td></tr><tr><td>新事業進出・ものづくり商業サービス補助金</td><td>AIで新しい商品・サービスを作り新市場に出たい</td><td>第1回公募 〜2026年10月30日18:00</td></tr></table></div>
+<h2>デジタル化・AI導入補助金2026（旧IT導入補助金）は使えるか</h2>
+<div class="wrap"><table><tr><th>項目</th><th>内容</th></tr><tr><td>対象者</td><td>国内で登記・事業を営む中小企業・小規模事業者等（法人・個人事業主）</td></tr><tr><td>対象経費</td><td>ソフトウェア・クラウドサービスの利用料等。2026年度から生成AI搭載ツールも対象に</td></tr><tr><td>補助率</td><td>通常枠は原則1/2以内（小規模事業者・賃上げ要件該当は2/3）。インボイス枠は上乗せで最大4/5</td></tr><tr><td>上限額</td><td>通常枠は5万〜450万円。枠により異なり、正確な額は公式シミュレーターで確認できる</td></tr><tr><td>公募時期</td><td>通常枠・インボイス枠・セキュリティ対策推進枠は1次締切2026年9月29日（火）17:00。複数者連携枠は10月30日（金）17:00</td></tr></table></div>
+<p>この補助金の対象は、登録された「IT導入支援事業者」が提供するツール・サービスである。SYNORは登録事業者ではないため（登録には法人格が必要）、SYNORの診断・導入支援の費用そのものは対象にならない。対象になり得るのは、導入時に組み合わせる登録済みのクラウドツールの利用料などで、該当するかは診断のなかで個別に確認する。</p>
+<p>出所：https://it-shien.smrj.go.jp/ ／https://www.uchida-it.co.jp/info/2026it/ （確認日2026-09-16）</p>
+<h2>中小企業省力化投資補助金は使えるか</h2>
+<div class="wrap"><table><tr><th>項目</th><th>内容</th></tr><tr><td>対象者</td><td>人手不足に悩む中小企業・小規模事業者等</td></tr><tr><td>対象経費</td><td>カタログ注文型は登録済み省力化製品の導入費。一般型はオーダーメイドの専用設備・システム構築費</td></tr><tr><td>補助率</td><td>中小企業1/2（大幅な賃上げ特例適用時2/3）、小規模事業者2/3が目安</td></tr><tr><td>上限額</td><td>カタログ注文型は従業員規模別に500万円（5人以下）〜1,000万円（21人以上）、賃上げ特例適用時750万〜1,500万円（2026年3月19日改定）。一般型は最大1億円</td></tr><tr><td>公募時期</td><td>第8回公募は2026年8月18日〜10月16日。申請ポータルの受付は9月18日10時開始</td></tr></table></div>
+<p>出所：https://shoryokuka.smrj.go.jp/ ／https://shoryokuka.smrj.go.jp/catalog/revision_260319/ （確認日2026-09-16）</p>
+<h2>人材開発支援助成金（AI研修）は使えるか</h2>
+<div class="wrap"><table><tr><th>項目</th><th>内容</th></tr><tr><td>対象者</td><td>雇用保険適用事業所の事業主</td></tr><tr><td>対象経費</td><td>社員向けAI・DX研修等の訓練経費、訓練時間中の賃金</td></tr><tr><td>助成率</td><td>訓練経費は中小企業75%・大企業60%。賃金助成は1人1時間あたり中小企業1,000円</td></tr><tr><td>上限額</td><td>1人あたり、訓練時間10時間以上100時間未満で30万円、100時間以上200時間未満で40万円、200時間以上で50万円</td></tr><tr><td>公募時期</td><td>随時受付だが、計画届は訓練開始日の1か月前までに提出が必要。本コースは2026年度が最終年度</td></tr></table></div>
+<p>出所：https://www.mhlw.go.jp/content/11600000/001103827.pdf ／https://hojyokin-portal.jp/columns/jinzaikaihatsu_reskilling （確認日2026-09-16）</p>
+<h2>新事業進出・ものづくり商業サービス補助金（旧ものづくり補助金）は使えるか</h2>
+<p>2026年度に、旧ものづくり補助金と中小企業新事業進出補助金が統合されてこの名称になりました。</p>
+<div class="wrap"><table><tr><th>項目</th><th>内容</th></tr><tr><td>対象者</td><td>新市場・高付加価値事業への進出や海外展開に取り組む中小企業等</td></tr><tr><td>対象経費</td><td>機械装置・システム構築費、クラウドサービス利用費、外注費、専門家経費等</td></tr><tr><td>補助率</td><td>1/2〜2/3（グローバル枠は2/3）</td></tr><tr><td>上限額</td><td>革新的新製品・サービス枠は最大2,500万円、新事業進出枠・グローバル枠は最大7,000万円（賃上げ特例で上乗せ、従業員規模でも変動）</td></tr><tr><td>公募時期</td><td>第1回公募の応募期間は2026年9月30日（水）〜10月30日（金）18:00</td></tr></table></div>
+<p>注意点：既存業務の効率化だけでは対象になりにくく、新しい製品・サービス・市場への進出という「新規性」が要件です。社内業務の効率化が目的なら、デジタル化・AI導入補助金か中小企業省力化投資補助金のほうが向いています。</p>
+<p>出所：https://shinjigyou-monodukuri.smrj.go.jp/overview ／https://www.chusho.meti.go.jp/koukai/hojyokin/kobo/2026/260630002.html （確認日2026-09-16）</p>
+<h2>自社がどれに当たるか、5問で確認する</h2>
+<ol>
+<li><strong>今回AIで良くしたいのは「今ある業務の効率化」か、「新しい商品・サービスでの新市場進出」か。</strong> 効率化ならデジタル化・AI導入補助金か省力化投資補助金、新市場進出なら新事業進出・ものづくり商業サービス補助金です。</li>
+<li><strong>従業員数は何人か（20人以下／21〜50人／51人以上）。</strong> 上限額の該当ランクが変わります。</li>
+<li><strong>導入したいのは既製のソフト・クラウドサービスが中心か、専用の設備・システム構築か。</strong> 前者はデジタル化・AI導入補助金、後者は省力化投資補助金（一般型）が候補です。</li>
+<li><strong>社員研修（AIの使い方を教える）に予算を使いたいか。</strong> 該当するなら人材開発支援助成金も確認します。</li>
+<li><strong>いつまでに動けるか（今月中／2〜3か月後／未定）。</strong> 今月〜来月に動けるなら直近締切に間に合う可能性があります。未定なら情報収集フェーズと位置づけます。</li>
+</ol>
+<h2>申請までに何を準備すればいいか</h2>
+<p>補助金は制度への該当性だけでなく、対象経費の切り分けや効果の数値化の準備で採否や手間が変わります。SYNORには、業務の自動化度を診断し、削減額と90日の順番を示す有償診断（5万円・導入時に全額充当）があります。名称は「AI業務診断」で、正式名称は決定後に差し替えます。この診断で該当しそうな制度の一次判定と業務整理までを扱いますが、申請書の作成・提出の代行はしていません。専門家（中小企業診断士・社労士等の登録支援機関）への橋渡しが必要なら診断時にご案内します。</p>
+<h2>よくある質問</h2>
+<p class="lead">Q. AI導入に使える補助金にはどんな種類がありますか。</p>
+<p>2026年9月時点で主に4系統あります。ITツール導入を補助する「デジタル化・AI導入補助金2026」、設備・システム投資を補助する「中小企業省力化投資補助金」と「新事業進出・ものづくり商業サービス補助金」、社員教育を補助する「人材開発支援助成金」です。</p>
+<p class="lead">Q. 補助金と助成金はどう違いますか。</p>
+<p>どちらも返済不要の公的資金です。補助金は審査があり不採択もあり得るのに対し、助成金は要件を満たせば原則として受給できる点が異なります。</p>
+<p class="lead">Q. どの制度が自社に合うかは、どう判断すればいいですか。</p>
+<p>「効率化目的か新規事業目的か」「投資の中心がソフトか設備か」「従業員数」の3点で見当がつきます。最終判断は公式ページか専門家にご確認ください。</p>
+<p class="lead">Q. 補助金の申請は、いつまでに動けばいいですか。</p>
+<p>制度ごとに公募回・締切が決まっています。使いたい制度が決まったら、公式ページで最新の締切を確認し、そこから逆算して準備します。</p>
+<p class="lead">Q. SYNORは補助金の申請代行をしてくれますか。</p>
+<p>申請書の作成・提出そのものの代行はしていません。AI業務診断の中で、該当しそうな制度の一次判定と、申請に必要な業務整理までを扱います。</p>
+<h2>自社がどれに当たるか、30分で一緒に確認します</h2>
+<p>制度は毎年のように改定され、公募回ごとに要件が変わります。SYNORの無料相談（30分）では、現状の業務と投資したい内容を伺い、該当しそうな制度の一次判定をその場で行います。売り込みはしません。</p>
+<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeow24u8tA2bw6NMGHjweMsaNxZI_1W52VsIdF4Mf8kRPzNaA/viewform" rel="noopener">30分の無料相談を予約する</a></p>
+<div class="cta"><strong>まずは30分、いまの業務の話をお聞かせください。費用はかかりません。</strong><br><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeow24u8tA2bw6NMGHjweMsaNxZI_1W52VsIdF4Mf8kRPzNaA/viewform" rel="noopener">30分相談を申し込む</a></div>
+</main>
+<footer class="site"><a href="https://synor.jp/">SYNOR</a><a href="https://synor.jp/tokushoho.html">特定商取引法に基づく表記</a><a href="https://synor.jp/privacy.html">プライバシーポリシー</a></footer>
+</body>
+</html>
